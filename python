@@ -1,0 +1,54 @@
+#1 -# def fibonacci(n):
+    if n <= 0:
+        return "Número inválido"
+    elif n == 1:
+        return 0
+    elif n == 2:
+        return 1
+    else:
+        fib_prev, fib = 0, 1
+        for _ in range(3, n+1):
+            fib_prev, fib = fib, fib_prev + fib
+        return fib
+
+
+numero = int(input("Digite um número: "))
+
+resultado = fibonacci(numero)
+
+if resultado == numero:
+    print(f"O número {numero} pertence à sequência de Fibonacci.")
+else:
+    print(f"O número {numero} não pertence à sequência de Fibonacci.")
+
+#2-# def contar_as(texto):
+    return texto.lower().count('a')
+
+# Obter o texto do usuário
+texto = input("Digite um texto: ")
+
+ocorrencias = contar_as(texto)
+print(f"A letra 'a' aparece {ocorrencias} vezes no texto.")
+
+#3-#INDICE = 12
+SOMA = 0
+K = 1
+
+while K < INDICE:
+    K = K + 1
+    SOMA = SOMA + K
+
+print(SOMA)
+#o valor final sera de 77, pois o K começa em 1 e vai ate -1 e a cada iteração, a variavel soma é incrementada com o valor atual de K
+#e somando todos valor de 2 a 11 da 77
+
+#4#
+#9
+#128
+#49
+#100
+#13
+#Sequencia nem sempre possui regras clara, pode ser aleatoria, complexa ou simples
+
+#5 Primeira ida: Ligue o primeiro interruptor e deixe os outros dois desligados. Entre em uma das salas e verifique se a lâmpada está acesa. Se estiver, o primeiro interruptor controla essa lâmpada. Se não estiver, siga para o próximo passo.
+#Segunda ida: Ligue o segundo interruptor e deixe o terceiro desligado. Entre na mesma sala da primeira ida. Se a lâmpada estiver acesa, o segundo interruptor controla essa lâmpada. Caso contrário, o terceiro interruptor controla a lâmpada da sala em que você está.
